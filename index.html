@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f9faf6"><meta name="description" content="Feimei Chen studies tactile sensing and underwater stereo vision at the University of Hawaiʻi at Mānoa. Explore her research projects and publications.">
+<title>Feimei Chen · Computer vision &amp; robotics</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<header class="shell top"><a class="nameplate" href="#top">Feimei Chen</a><nav aria-label="Main navigation"><a href="#research">Research</a><a href="#publication">Publication</a></nav></header>
+<main id="main">
+<section class="shell hero" aria-labelledby="intro">
+<div class="intro"><p class="eyebrow">Computer vision &amp; robotics</p><h1 id="intro">Feimei Chen</h1><p class="lead">I study how cameras can measure touch and how stereo vision can measure fish underwater.</p><p class="bio">I’m a computer science Ph.D. student at the University of Hawaiʻi at Mānoa. I work with Huaijin Chen in the Computational Imaging and Robotic Perception Lab.</p>
+<div class="actions"><a class="email" href="mailto:feimei@hawaii.edu">feimei@hawaii.edu</a></div></div>
+<div class="research-gallery" aria-label="Research images">
+<figure class="photo-panel fringe-panel">
+  <a href="assets/fringetact-contact-views.pdf" aria-label="Open the six-panel FringeTact figure as a PDF"><img src="assets/fringetact-contact-views.png" alt="Two rows compare toy and cone contact. The front and side columns show stress fringes, and the bottom column shows the contact area." width="881" height="669"></a>
+  <figcaption><strong>FringeTact</strong><span>Toy and cone · three camera views</span></figcaption>
+</figure>
+<figure class="photo-panel fish-panel">
+  <a href="assets/fishpod-overview.pdf" aria-label="Open the FishPod system overview as a PDF"><img src="assets/fishpod-overview.png" alt="FishPod mounted on an underwater robot, alongside a tracking result and the pipeline from stereo video through segmentation and triangulation to fish length." width="1536" height="565"></a>
+  <figcaption><strong>FishPod</strong><span>From stereo video to fish length</span></figcaption>
+</figure>
+</div>
+</section>
+<section class="shell section" id="research" aria-labelledby="research-title"><header class="section-head"><h2 id="research-title">Research</h2><p>Doctoral projects</p></header>
+<div class="projects">
+<article><p class="eyebrow">Optical tactile sensing</p><h3>FringeTact</h3><p>I built a sensor around a transparent elastomer cube. Two cameras record the colored fringes that appear under load, and a third camera looks up at the contact area.</p>
+<figure class="photo-panel hardware-figure" id="fringetact-hardware">
+  <a href="assets/fringetact-assembly.pdf" aria-label="Open the FringeTact assembly drawing as a PDF"><img loading="lazy" src="assets/fringetact-assembly.png" width="858" height="740" alt="Exploded sensor assembly with a 20 mm elastomer cube, polarizers, light guides, two side cameras, and a USB camera below."></a>
+  <figcaption><strong>Sensor assembly</strong><span>Optics and camera positions</span></figcaption>
+</figure>
+<details><summary>Sensor and simulation</summary><div><p>The cube measures 20 mm on each side. I paired finite-element stress simulations with polarized-light rendering to generate images with known pressure and shear distributions.</p><p>I used the fringe images to train a model to distinguish normal from shear loading and estimate the magnitude of the force.</p></div></details></article>
+<article><p class="eyebrow">Underwater stereo vision</p><h3>FishPod</h3><p>I use calibrated stereo video to track individual fish and estimate their length as they swim. Matching the head and tail between views lets us measure them in 3D.</p>
+<figure class="photo-panel hardware-figure" id="fishpod-design">
+  <a href="assets/fishpod-design.pdf" aria-label="Open the FishPod hardware design as a PDF"><img loading="lazy" src="assets/fishpod-design.png" width="1095" height="980" alt="Exploded view of the FishPod housing with its ZED 2i stereo camera, Raspberry Pi 5 and battery pack, above front and side photos of the pod mounted beneath the underwater robot."></a>
+  <figcaption><strong>FishPod assembly</strong><span>Stereo camera housing and robot mount</span></figcaption>
+</figure>
+<details><summary>Calibration and evaluation</summary><div><p>I captured underwater ChArUco board images and used OpenCV to correct lens distortion and rectify stereo pairs. The pipeline tracks fish with YOLO11n and ByteTrack, matches segmentation masks across views, and triangulates the endpoints.</p><p>Across eight artificial fish and two real specimens, nine of the ten length estimates were within 10% of the measured length.</p></div></details></article>
+</div></section>
+<section class="shell section pub" id="publication" aria-labelledby="pub-title"><header class="section-head"><h2 id="pub-title">Publication</h2><p>Workshop paper</p></header><div class="pub-content"><p class="eyebrow">ICCV Workshops · 2025</p><h3><a href="https://openaccess.thecvf.com/content/ICCV2025W/CV4DC/papers/Motsoehli_Simulating_Refractive_Distortions_and_Weather-Induced_Artifacts_for_Resource-Constrained_Autonomous_Perception_ICCVW_2025_paper.pdf">Simulating Refractive Distortions and Weather-Induced Artifacts for Resource-Constrained Autonomous Perception</a></h3><p class="authors">Moseli Mots’oehli, <strong>Feimei Chen</strong>, Hok Wai Chan, Itumeleng Tlali, Thulani Babeli, Kyungim Baek, and Huaijin Chen</p><p>I modeled lens distortion, turbulence-like warping, and chromatic aberration in Python and OpenCV.</p></div></section>
+</main><footer class="shell"><span>Feimei Chen · Honolulu, Hawaiʻi</span><a href="mailto:feimei@hawaii.edu">Email</a></footer>
+</body></html>
